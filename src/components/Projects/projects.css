@@ -1,0 +1,51 @@
+#projects{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin: 1rem;
+}
+.projectImages{
+    display: flex;
+    width: 90vw;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 3rem;
+}
+.projectImg{
+    height: 14.5rem;
+    margin: 0.5rem;
+    width: 15rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    color: black;
+}
+.projectImg:hover{
+    height: 15rem;
+    margin: 0.5rem;
+    width: 15.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    color: black;
+    font-weight: 500;
+}
+

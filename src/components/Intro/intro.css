@@ -4,17 +4,18 @@
     max-width: 75rem;
     margin: 0 auto;
     overflow: hidden;
-    position: relative
+    position: relative;
 }
 
 .bg{
     position: absolute;
-    top: 0;
+    top: 2;
     z-index: -1;
     right: 0;
     object-fit: cover;
     height: 85vh;
     border-radius: 100%;
+    margin-top: 30px;
 }
 .intro-content{
     height: 100vh;
@@ -32,7 +33,7 @@
     font-weight: 100;
 }
 .introName{
-    color: yellow
+    color: rgb(255, 208, 0)
 }
 .introPara{
     font-size: medium;
@@ -53,6 +54,12 @@
 }
 .btnText{
     margin-top: 0.3rem;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
 }
 @media screen and (max-width: 840px){
     .bg{

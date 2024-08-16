@@ -1,24 +1,46 @@
-import React from 'react';
-import './projects.css';
+import React from "react";
+import "./projects.css";
+import { Card, Box, Typography, CardContent } from "@mui/material";
+import Slider from "react-slick";
+import { makeStyles } from "@mui/styles";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const projects = require("./data.json").data;
+
+const settings = {
+  className: "center",
+  centerMode: true,
+  infinite: true,
+  centerPadding: "60px",
+  slidesToShow: 3,
+  speed: 500,
+  autoPlay: true,
+};
 
 const Projects = () => {
-    
+  const card = projects.map((project) => {
+    return (
+      <div clssName="projectBlock">
+        <a href={project.link}>
+          <div className="projectImg">
+            <h2>{project.name}</h2>
+          </div>
+        </a>
+      </div>
+    );
+  });
 
   return (
     <section id="projects">
-        <span className='title'>My Projects</span>
-        <div className='projectImages'>
-            <a href="https://traveljournal-frontend.web.app/"><div className='projectImg' ><h2>Travel Journal</h2></div></a>
-            <a href="https://food-order-app-433bf.web.app/"><div className='projectImg' ><h2>Food Order App</h2></div></a>   
-            <a href="https://color-code-app.web.app/"><div className='projectImg' ><h2>Color Code App</h2></div></a>    
-            <a href="https://tenzies-game-51037.web.app/"><div className='projectImg' ><h2>Tenzies Game</h2></div></a>
-            <a href="https://github.com/Jayant211998/CarEvaluation"><div className='projectImg' ><h2>Car Evaluation</h2></div></a>
-            <a href="https://github.com/Jayant211998/HandGestureRecognition"><div className='projectImg' ><h2>Gesture Recognition</h2></div></a>   
-            <a href="https://github.com/Jayant211998/TicTacToe"><div className='projectImg' ><h2>Tic Tac Toe</h2></div></a>    
-            <a href="https://github.com/Jayant211998/voice-assistant"><div className='projectImg' ><h2>Voice Assistant</h2></div></a>    
+      <span className="title">My Projects</span>
+      <div className="container">
+        <div className="slider1">
+          <Slider {...settings}>{card}</Slider>
         </div>
+      </div>
     </section>
-    )
-}
+  );
+};
 
-export default Projects
+export default Projects;
